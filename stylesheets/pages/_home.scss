@@ -112,3 +112,33 @@
     }
   }
 }
+
+@include respond-to(sm-down) {
+  .home {
+    height: 100%;
+
+    .content-wrapper {
+      height: 100%;
+
+      &.side {
+        border-radius: 20px 20px 0 0;
+      }
+
+      &.main {
+        border-radius: 0 0 20px 20px;
+      }
+    }
+  }
+}
+
+@include respond-to(xs) {
+  .home {
+    li.skillbar {
+      flex-basis: 100%;
+    }
+
+    .content-wrapper {
+      margin: 0 15px;
+    }
+  }
+}

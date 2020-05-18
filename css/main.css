@@ -451,6 +451,10 @@ p.page-desc {
   h3.section-title {
     font-size: 18px; } }
 
+@media screen and (max-width: 767px) {
+  .nav.nav-tabs {
+    justify-content: center; } }
+
 /**
  * Clear inner floats
  */
@@ -695,3 +699,19 @@ p.page-desc {
     margin-bottom: 0; }
   .home .skills-holder {
     justify-content: space-between; } }
+
+@media screen and (max-width: 767px) {
+  .home {
+    height: 100%; }
+    .home .content-wrapper {
+      height: 100%; }
+      .home .content-wrapper.side {
+        border-radius: 20px 20px 0 0; }
+      .home .content-wrapper.main {
+        border-radius: 0 0 20px 20px; } }
+
+@media screen and (max-width: 575px) {
+  .home li.skillbar {
+    flex-basis: 100%; }
+  .home .content-wrapper {
+    margin: 0 15px; } }
