@@ -1,0 +1,256 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  padding: 0;
+  overflow: hidden;
+
+/* 1 */
+
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  position: absolute;
+
+  padding: 0;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+
+
+
+// skills
+.progress-bar {
+  padding-right: 24px;
+  margin: 0 0 10px;
+  overflow: hidden;
+  /* Separate bars from container */
+}
+
+.progress-title-holder {
+  position: relative;
+
+  margin-bottom: 0;
+
+  font-family: $poppins-medium;
+  font-size: 17px;
+  color: #000000;
+  text-align: left;
+}
+
+.progress-title {
+  z-index: 100;
+}
+
+.down-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  border-top: 3px solid #16171d;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+
+  transform: translateX(-50%);
+}
+
+.progress-content-outter {
+  height: 12px;
+
+  background-color: #eaeaea;
+}
+
+.progress-content {
+  width: 0;
+  height: 21px;
+
+  background-color: $khaki;
+}
+
+
+
+
+
+
+
+
+.timeline {
+  position: relative;
+
+  padding: 20px 0 20px;
+
+  list-style: none;
+}
+
+.timeline:before {
+  content: " ";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  margin-left: -1.5px;
+  width: 3px;
+
+  background-color: #eeeeee;
+}
+
+.timeline > li {
+  position: relative;
+
+  margin-bottom: 20px;
+}
+
+.timeline > li:before, .timeline > li:after {
+  content: " ";
+
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before, .timeline > li:after {
+  content: " ";
+
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  position: relative;
+
+  float: left;
+  padding: 20px;
+  width: 46%;
+
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, .175);
+
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .175);
+}
+
+.timeline > li > .timeline-panel:before {
+  content: " ";
+
+  position: absolute;
+  top: 26px;
+  right: -15px;
+
+  display: inline-block;
+
+  border-top: 15px solid transparent;
+  border-right: 0 solid #cccccc;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #cccccc;
+}
+
+.timeline > li > .timeline-panel:after {
+  content: " ";
+
+  position: absolute;
+  top: 27px;
+  right: -14px;
+
+  display: inline-block;
+
+  border-top: 14px solid transparent;
+  border-right: 0 solid #ffffff;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #ffffff;
+}
+
+.timeline > li > .timeline-badge {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  z-index: 100;
+
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+
+  color: #ffffff;
+  text-align: center;
+
+  background-color: $khaki;
+  border-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  right: auto;
+  left: -14px;
+
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+
+.timeline-title {
+  margin-top: 0;
+
+  color: inherit;
+}
+
+.timeline-body > p, .timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}

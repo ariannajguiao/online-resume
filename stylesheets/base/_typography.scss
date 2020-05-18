@@ -1,0 +1,183 @@
+/**
+ * Basic typography style for copy text
+ */
+*, body {
+  font-family: $poppins-light;
+  font-size: 14.5px;
+}
+
+h1.page-title {
+  position: relative;
+  z-index: 1;
+
+  font-family: $poppins-bold;
+
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: calc(100% - 10px);
+    height: 16px;
+
+    background-color: $plum;
+  }
+}
+
+p.page-desc {
+  font-family: $poppins-light;
+}
+
+.nav.nav-tabs {
+  display: flex;
+  justify-content: flex-end;
+
+  font-family: $poppins-bold;
+
+  li a {
+    position: relative;
+    z-index: 10;
+
+    padding: 10px;
+
+    font-family: $poppins-bold, sans-serif;
+    font-size: 19px;
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.nav-tabs a {
+  position: relative;
+
+  display: inline-block;
+  padding: 15px 20px;
+
+  letter-spacing: .15em;
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-tabs a:after, .nav-tabs a.active:after {
+  content: "";
+
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
+
+  display: block;
+  width: 0;
+  height: 20px;
+
+  background: $plum;
+
+  transition: width .3s ease 0s, left .3s ease 0s;
+}
+
+
+
+
+.nav-tabs a:hover:after, .nav-tabs a.active:after {
+  left: 0;
+
+  width: calc(100% - 20px);
+}
+
+.nav.nav-tabs {
+  padding-bottom: 25px;
+
+  border-bottom: 0;
+}
+
+
+.section-title {
+  position: relative;
+  z-index: 1;
+
+  font-family: $poppins-bold;
+
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: calc(100% - 500px);
+    height: 16px;
+
+    background-color: $lightskyblue;
+  }
+}
+
+
+// $colors: $lightskyblue,
+// $khaki,
+// $aquamarine,
+// $lightsalmon,
+// $mistyrose;
+
+// @for $i from 1 through length($colors) {
+//   .section-title span {
+//     background: lighten(nth($colors, $i), 0%);
+//   }
+// }
+
+
+
+.work-subtitle, .work-subtitle a {
+  margin-bottom: 3px;
+
+  font-family: $poppins-medium, sans-serif;
+  font-size: 16px;
+}
+
+.work-title {
+  margin-bottom: 5px;
+
+  font-family: $poppins-bold, sans-serif;
+  font-size: 18px;
+}
+
+.timeline ul {
+  padding-top: 12px;
+}
+
+.home a {
+  color: #000000;
+
+  &:hover {
+    color: $lightsalmon;
+    text-decoration: none;
+
+    transition: .3s all ease-in;
+  }
+}
+
+
+@include respond-to(md-down) {
+  h1.page-title {
+    font-size: 32px;
+  }
+
+  *, body {
+    font-size: 13px;
+  }
+
+  .nav.nav-tabs li a {
+    padding: 7px;
+
+    font-size: 14.5px;
+  }
+
+  h3.section-title {
+    font-size: 18px;
+  }
+}

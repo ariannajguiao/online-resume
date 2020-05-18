@@ -1,0 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($poppins-light, $base-url + "fonts/", "Poppins-Light", "Poppins-Light");
+@include font-face($poppins-medium, $base-url + "fonts/", "Poppins-Medium", "Poppins-Medium");
+@include font-face($poppins-bold, $base-url + "fonts/", "Poppins-Bold", "Poppins-Bold");

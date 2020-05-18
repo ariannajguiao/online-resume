@@ -1,0 +1,114 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  height: 100vh;
+
+  background: url(/assets/images/bg.png);
+  background-size: cover;
+
+  .icon {
+    display: flex;
+    margin: 25px auto;
+    width: auto;
+    height: 183px;
+
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  }
+
+  iframe {
+    height: 500px;
+  }
+
+  .content-wrapper {
+    padding: 20px;
+    margin-bottom: 35px;
+    height: 600px;
+
+    background-color: #ffffff;
+
+
+    &.side {
+      // text-align: center;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    &.main {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  .timeline-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .skills-holder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  li.skillbar {
+    flex-basis: calc(50% - 45px);
+  }
+
+  .progress-bar {
+    background-color: transparent;
+  }
+
+  .timeline ul li {
+    font-size: 12.5px;
+  }
+
+  .swiper-container {
+    height: 400px;
+  }
+
+  .swiper-slide {
+    margin: auto;
+    height: 100%;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: background-position 5s ease-out 5s;
+
+    &:hover {
+      background-position: bottom center !important;
+
+      cursor: pointer;
+      transition: background-position 5s linear 0s;
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .home {
+    .icon {
+      height: 125px;
+    }
+
+    .content-wrapper {
+      margin-bottom: 0;
+    }
+
+    .skills-holder {
+      justify-content: space-between;
+    }
+  }
+}
