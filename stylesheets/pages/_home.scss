@@ -36,7 +36,10 @@
 
 
     &.side {
-      // text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       border-bottom-left-radius: 20px;
       border-top-left-radius: 20px;
     }
@@ -76,6 +79,13 @@
 
   .swiper-container {
     height: 400px;
+  }
+
+  .tab-content {
+    position: relative;
+
+    height: 475px;
+    overflow: auto;
   }
 
   .swiper-slide {
@@ -125,6 +135,8 @@
       }
 
       &.main {
+        padding-top: 0;
+
         border-radius: 0 0 20px 20px;
       }
     }

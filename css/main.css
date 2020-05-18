@@ -349,6 +349,7 @@ html {
 h1.page-title {
   position: relative;
   z-index: 1;
+  margin-bottom: 2rem;
   font-family: "Poppins Bold"; }
   h1.page-title:after {
     content: "";
@@ -449,11 +450,14 @@ p.page-desc {
     padding: 7px;
     font-size: 14.5px; }
   h3.section-title {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .section-title span {
+    width: calc(100% - 200px); } }
 
 @media screen and (max-width: 767px) {
   .nav.nav-tabs {
-    justify-content: center; } }
+    justify-content: center;
+    padding-bottom: 50px; } }
 
 /**
  * Clear inner floats
@@ -634,6 +638,17 @@ p.page-desc {
 .timeline-body > p + p {
   margin-top: 5px; }
 
+@media screen and (max-width: 991px) {
+  .timeline > li > .timeline-panel {
+    float: right;
+    width: 100%; }
+  .timeline:before {
+    left: 0; }
+  .timeline > li > .timeline-badge {
+    display: none; }
+  .timeline > li > .timeline-panel:before, .timeline > li > .timeline-panel:after, .timeline:before {
+    content: none; } }
+
 .home {
   display: flex;
   justify-content: center;
@@ -657,6 +672,9 @@ p.page-desc {
     height: 600px;
     background-color: #ffffff; }
     .home .content-wrapper.side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-bottom-left-radius: 20px;
       border-top-left-radius: 20px; }
     .home .content-wrapper.main {
@@ -680,6 +698,10 @@ p.page-desc {
     font-size: 12.5px; }
   .home .swiper-container {
     height: 400px; }
+  .home .tab-content {
+    position: relative;
+    height: 475px;
+    overflow: auto; }
   .home .swiper-slide {
     margin: auto;
     height: 100%;
@@ -708,6 +730,7 @@ p.page-desc {
       .home .content-wrapper.side {
         border-radius: 20px 20px 0 0; }
       .home .content-wrapper.main {
+        padding-top: 0;
         border-radius: 0 0 20px 20px; } }
 
 @media screen and (max-width: 575px) {

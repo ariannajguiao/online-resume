@@ -10,6 +10,8 @@ h1.page-title {
   position: relative;
   z-index: 1;
 
+  margin-bottom: 2rem;
+
   font-family: $poppins-bold;
 
 
@@ -180,10 +182,15 @@ p.page-desc {
   h3.section-title {
     font-size: 18px;
   }
+
+  .section-title span {
+    width: calc(100% - 200px);
+  }
 }
 
 @include respond-to(sm-down) {
   .nav.nav-tabs {
     justify-content: center;
+    padding-bottom: 50px;
   }
 }
