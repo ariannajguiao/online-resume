@@ -7,7 +7,7 @@
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: "/assets/" !default;
+$base-url: "../assets/" !default;
 $plum: #d3a5e0;
 $lightskyblue: #81f3ff;
 $khaki: #fbdf7d;
