@@ -91,6 +91,8 @@
   .swiper-slide {
     margin: auto;
     height: 100%;
+    width: 100%;
+    max-width: 100%;
 
     background-position: top center;
     background-repeat: no-repeat;
@@ -149,8 +151,8 @@
       flex-basis: 100%;
     }
 
-    .content-wrapper {
-      margin: 0 15px;
-    }
+    // .content-wrapper {
+    //   margin: 0 15px;
+    // }
   }
 }

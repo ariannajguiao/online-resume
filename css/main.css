@@ -705,6 +705,8 @@ p.page-desc {
   .home .swiper-slide {
     margin: auto;
     height: 100%;
+    width: 100%;
+    max-width: 100%;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -735,6 +737,4 @@ p.page-desc {
 
 @media screen and (max-width: 575px) {
   .home li.skillbar {
-    flex-basis: 100%; }
-  .home .content-wrapper {
-    margin: 0 15px; } }
+    flex-basis: 100%; } }
